@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #102626;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-reflect: below 25px linear-gradient(#0001, #0004);
+}
+
+.hours {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  animation: animate 43200s linear infinite;
+  z-index: 2;
+}
+
+.hours::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 80px;
+  background: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  z-index: 100;
+  box-shadow: 0 0 10px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.9);
+}
+
+.seconds {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #0d2323;
+  animation: animate 60s linear infinite;
+  z-index: 1;
+}
+
+.seconds::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 115px;
+  background: red;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  z-index: 1;
+  box-shadow: 0 0 10px white,
+}
+
+.minute{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  animation: animate 3600s linear infinite;
+  z-index: 1;
+}
+.minute::after {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 95px;
+  background: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  z-index: 1;
+  box-shadow: 0 0 10px white,
+}
+
+
+.ball {
+  position: absolute;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  z-index: 2;
+  width: 20px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.9);
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hour {
+  position: absolute;
+  z-index: 3;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  
+}
+
+.h12 {
+  margin-top: -280px;
+}
+
+.h6 {
+  margin-bottom: -280px;
+}
+
+.h3 {
+  margin-right: -280px;
+}
+
+.h9 {
+  margin-left: -280px;
+}
