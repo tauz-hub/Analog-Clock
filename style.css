@@ -114,14 +114,6 @@ body {
   }
 }
 
-.hour {
-  position: absolute;
-  z-index: 3;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  
-}
-
 .h12 {
   margin-top: -280px;
 }
