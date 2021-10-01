@@ -1,4 +1,4 @@
-# Card-s-Social-Glassmorphism
+# Analog clock
 
 ### Access here : [https://tauzxd.github.io/Analog-Clock/]
 
